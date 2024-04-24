@@ -7,6 +7,7 @@ const userSchema = new mongoose.Schema({
   //name, email, photo, password, passwordConfirm,
   name: {
     type: String,
+    minlength: 4,
     required: [true, "A user must have a name"],
   },
   email: {

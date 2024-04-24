@@ -27,7 +27,7 @@ app.use(morgan("dev"));
 
 //Limit request from same API
 const limiter = rateLimit({
-  max: 10,
+  max: 100,
   windowMs: 60 * 60 * 1000,
   message: "Too many request from this ip, please try again in an hour",
   keyGenerator: function (req /*, res */) {
